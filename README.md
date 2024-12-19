@@ -10,6 +10,11 @@ Generation of status flags:
 - Parity - whether no. of 1's is odd or even
 - Overflow - whether the sum can't fit in 16 bits
 
+For a full adder
+
+Sum = (A $\oplus$ B) $\oplus$ Cin
+
+Carry = A.B + (A + B).Cin = A.B + (A $\oplus$ B).Cin
 
 ![RTL Design of 16 Bit Adder](https://imgur.com/dbnepWB.png)
 
@@ -17,11 +22,15 @@ Generation of status flags:
 
 Figure 1 : Code & schematic of a full adder using gates
 
+Now, 4 bit Ripple carry adder is just instatiation of four 1 bit full adders.
+
 ![RTL Design of 16 Bit Adder](https://imgur.com/DjYzT3u.png)
 
 ![RTL Design of 16 Bit Adder](https://imgur.com/A8ZObEn.png)
 
 Figure 2 : Code & schematic of a 4 bit rippple carry adder using 1 Bit Full Adder
+
+Simillarilyinstantiation is done here to get our final schematic along with some externel status flag generation circuits.
 
 ![RTL Design of 16 Bit Adder](https://imgur.com/II3JqX6.png)
 

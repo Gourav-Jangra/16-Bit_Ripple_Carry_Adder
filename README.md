@@ -1,5 +1,5 @@
 # 16-Bit_Ripple_Carry_Adder
-The aim is to write a code for 16 bit full adder which is in ripple carry architecture, along with this there are status flags are also given. The coding is needed to be done in gate level description.
+The aim is to write a code and testbench for 16 bit full adder which is in ripple carry architecture, along with this there are status flags are also given. The coding is needed to be done in gate level description.
 
 Verilog is used as hardware description language and xlinix Vivado 2017.1 is used for implementation. Module instantiation of lower level is used to go to higher level.
 
@@ -10,17 +10,20 @@ Generation of status flags:
 - Parity - whether no. of 1's is odd or even
 - Overflow - whether the sum can't fit in 16 bits
 
-For a full adder
+## 1 Bit Full adder
 
 Sum = (A $\oplus$ B) $\oplus$ Cin
 
 Carry = A.B + (A + B).Cin = A.B + (A $\oplus$ B).Cin
-
+<br/>
+<br/>
 ![RTL Design of 16 Bit Adder](https://imgur.com/dbnepWB.png)
 
 ![RTL Design of 16 Bit Adder](https://imgur.com/EFvJzXt.png)
 
 Figure 1 : Code & schematic of a full adder using gates
+
+## 4 Bit Ripple Carry Adder
 
 Now, 4 bit Ripple carry adder is just instatiation of four 1 bit full adders.
 
@@ -30,7 +33,9 @@ Now, 4 bit Ripple carry adder is just instatiation of four 1 bit full adders.
 
 Figure 2 : Code & schematic of a 4 bit rippple carry adder using 1 Bit Full Adder
 
-Simillarilyinstantiation is done here to get our final schematic along with some externel status flag generation circuits.
+## 16 Bit Ripple Carry Adder with Status generation flags
+
+Simillarily, instantiation is done here to get our final schematic along with some externel status flag generation circuits.
 
 ![RTL Design of 16 Bit Adder](https://imgur.com/II3JqX6.png)
 
@@ -38,6 +43,9 @@ Simillarilyinstantiation is done here to get our final schematic along with some
 
 Figure 3 : Code & schematic of a 16 bit rippple carry adder using 4 Bit ripple carry Adder and status flags
 
+## Testbench
 
+![](https://imgur.com/WK5UbBG.png)
 
+Figure 4 : Code for testbench of 16 bit ripple carry adder
  
